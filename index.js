@@ -166,14 +166,7 @@ const specs = swaggerJsdoc(options)
 
 // Frontend
 app.get("/", (req, res) => {
-  fs.readFile("./views/index.ejs", "utf8", (err, data) => {
-    if (err) {
-      console.error(err)
-      return res.status(500).send("Error")
-    }
-    const html = ejs.render(data, { methods })
-    res.send(html)
-  })
+  res.json({"status":"allgood"})
 })
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs))

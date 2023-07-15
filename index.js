@@ -11,7 +11,7 @@ import fs from "fs"
 import path from "path"
 import ejs from "ejs"
 
-import { methods } from "./route/methods.js"
+import { methods } from "./src/route/methods.js"
 
 dotenv.config()
 
